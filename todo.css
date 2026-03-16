@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1a1a18;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+}
+
+.titulo {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;                  /* ocupa todo o espaço disponível */
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-image:
+        linear-gradient(#1a1a18, #1a1a18),
+        linear-gradient(135deg, #0d337a 0%, #0090a1 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: #fff;
+    font-size: 1rem;
+    font-family: Georgia, serif;
+    outline: none;            /* tira a borda azul padrão do navegador */
+}
+
+input::placeholder {
+    color: #ffffff50;         /* placeholder bem apagado */
+}
+
+#btn-adicionar {
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #0d337a 0%, #0090a1 100%);
+    color: #fff;
+    transition: opacity 0.2s;
+}
+
+#btn-adicionar:hover {
+    opacity: 0.8;
+}
+
+#lista-tarefas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tarefa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* empurra o botão de deletar pro lado direito */
+    padding: 16px 20px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-image:
+        linear-gradient(#1a1a18, #1a1a18),
+        linear-gradient(135deg, #0d337a 0%, #0090a1 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.tarefa.concluida span {
+    text-decoration: line-through;  /* risca o texto quando concluída */
+    opacity: 0.4;
+}
+
+.btn-deletar {
+    background: none;
+    border: none;
+    color: #0090a1;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-deletar:hover {
+    opacity: 0.6;
+}
